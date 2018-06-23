@@ -1,0 +1,17 @@
+{
+  "name": "clanta",
+  "version": "1.0.0",
+  "description": "A Command Line Note taking app for storing tokens, passwords and other small notes.",
+  "main": "index.js",
+  "bin": {
+    "clanta": "bin/clanta"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nityananda Gohain",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
