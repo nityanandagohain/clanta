@@ -4,10 +4,38 @@
 
 #### commands
 
-`$clanta --save --name="clanta_heroku_token" --token="kjdasd122323dsasda"`
+#### Help:
 
-`$clanta --save --name="heroku_password" --password="xxxxxxx"`
+`$clanta --help` or `$clanta -h`
 
-`$clanta --get --name="clanta_heroku_token"`
+`$clanta --help=save` or replace save with get,remove.
 
-`$clanta --get --name="heroku_password"`
+#### Save :
+
+`$clanta save token --name="xtoken" --token="kjdas"`
+
+`$clanta save password --name="xpassword" --password="xxxxx"`
+
+`$clanta save note --name="my_note" --note="Hi I am good"`
+
+#### Get/Retive :
+
+`$clanta get token --name="xtoken"`
+
+`$clanta get password --name="xpassword"`
+
+`$clanta get note --name="my_note"`
+
+* To get all tokens , passwords or notes
+
+`$clanta get  tokens`
+
+or replce tokens , with passwords or notes.
+
+#### Remove/delete
+
+`$clanta remove token --name="xtoken"`
+
+`$clanta remove password --name="xpassword"`
+
+`$clanta remove note --name="my_note"`
