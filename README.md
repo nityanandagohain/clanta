@@ -1,6 +1,6 @@
 ### CLANTA
 
-#### A command Line note taking application for storing tokens,passwords and other small notes.
+#### A command Line note taking application for storing tokens/key,passwords and other small notes.
 
 #### commands
 
@@ -12,13 +12,13 @@
 
 #### Save :
 
-`$clanta save token --name="xtoken" --token="kjdas"`
+`$clanta save token --name="xtoken" --value="kjdas"`
 
-`$clanta save password --name="xpassword" --password="xxxxx"`
+`$clanta save password --name="xpassword" --value="xxxxx"`
 
-`$clanta save note --name="my_note" --note="Hi I am good"`
+`$clanta save note --name="my_note" --value="Hi I am good"`
 
-#### Get/Retive :
+#### Get/Retrive :
 
 `$clanta get token --name="xtoken"`
 

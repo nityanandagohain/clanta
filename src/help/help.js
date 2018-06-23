@@ -9,11 +9,11 @@ module.exports = (args) => {
             
         save:`
         token   :
-                clanta save token --name="xtoken" --token="hkja"
+                clanta save token --name="xtoken" --value="hkja"
         password:
-                $clanta save password --name="xpassword" --password="xxxx"
+                $clanta save password --name="xpassword" --value="xxxx"
         note    :
-                $clanta save note --name="my_note" --note="Hi I am good"`,
+                $clanta save note --name="my_note" --value="Hi I am good"`,
         get : `
         token   :
                 $clanta get token --name="xtoken"

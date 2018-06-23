@@ -3,6 +3,25 @@
   "version": "1.0.0",
   "description": "A Command Line Note taking app for storing tokens, passwords and other small notes.",
   "main": "index.js",
+  "homepage": "https://github.com/nityanandagohain/clanta#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nityanandagohain/clanta.git"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  },
+  "keywords": [
+    "save",
+    "cli",
+    "storage",
+    "local",
+    "key",
+    "tokens",
+    "notes",
+    "passwords"
+  ],
+  "preferGlobal": true,
   "bin": {
     "clanta": "bin/clanta"
   },
@@ -12,6 +31,8 @@
   "author": "Nityananda Gohain",
   "license": "MIT",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "jsonfile": "^4.0.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1"
   }
 }
