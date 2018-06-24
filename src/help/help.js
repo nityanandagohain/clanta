@@ -1,39 +1,53 @@
 module.exports = (args) => {
     const menus = {
         main: `
-        clanta [command] [type]
+clanta [command] [type] [flags]
 
-        save      ............... save a new note
-        get       ............... Get a saved note  
-        remove    ............... delete a note`,
-            
+[commands]
+        save      ............... save a new note.
+        show      ............... Get a saved note.
+        remove    ............... delete a note.
+
+[type]
+        token     ............... Refers to a token/key.
+        password  ............... Password.
+        note      ............... Note.
+
+[flags]
+        --name    ............... name of the token/key, password and note.
+        --value   ............... The token/key, password or note.
+
+For more specific helps and examples on save, show or remove
+        clanta --help=save 
+        You can replace save with show or remove
+        `,
         save:`
-        token   :
-                clanta save token --name="xtoken" --value="hkja"
-        password:
-                $clanta save password --name="xpassword" --value="xxxx"
-        note    :
-                $clanta save note --name="my_note" --value="Hi I am good"`,
-        get : `
-        token   :
-                $clanta show token --name="xtoken"
-        password:
-                $clanta show password --name="xpassword"
-        note    :
-                $clanta show note --name="my_note"
-    
-        To show all tokens , passwords or notes:
-    
-                $clanta show  tokens
-    
-        or replce tokens , with passwords or notes.`,
+token   :
+        $clanta save token --name="xxxxx" --value="xxxxxxxxxxxxxx"
+password:
+        $clanta save password --name="xxxx" --value="xxxxxxxx"
+note    :
+        $clanta save note --name="xxxxx" --value="xx xx xxx x xxxx"`,
+        show : `
+token   :
+        $clanta show token --name="xxxxx"
+password:
+        $clanta show password --name="xxxxx"
+note    :
+        $clanta show note --name="xxxxx"
+
+To show all tokens , passwords or notes:
+
+        $clanta show tokens
+
+You can replce tokens with passwords or notes.`,
         remove : `
-        token   :
-                clanta remove token --name="xtoken" 
-        password:
-                $clanta remove password --name="xpassword" 
-        note    :
-                $clanta remove note --name="my_note"`
+token   :
+        $clanta remove token --name="xxxxxx" 
+password:
+        $clanta remove password --name="xxxx" 
+note    :
+        $clanta remove note --name="xxxxx"`
         }
     
     if(args.help == 'save'){
@@ -44,8 +58,5 @@ module.exports = (args) => {
         console.log(menus.remove);
     }else{
         console.log(menus.main);        
-        console.log(menus.save);
-        console.log(menus.get);
-        console.log(menus.remove);
     }
 }

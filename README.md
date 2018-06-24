@@ -1,5 +1,7 @@
 ### CLANTA
 
+https://www.npmjs.com/package/clanta
+
 #### A command Line note taking application for storing tokens/key,passwords and other small notes.
 
 #### commands
