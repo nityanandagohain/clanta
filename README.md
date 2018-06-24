@@ -8,6 +8,8 @@
 
 `$clanta --help` or `$clanta -h`
 
+*For specific help
+
 `$clanta --help=save` or replace save with show,remove.
 
 #### Save :
@@ -18,7 +20,7 @@
 
 `$clanta save note --name="my_note" --value="Hi I am good"`
 
-#### Get/Retrive :
+#### Show/Retrive :
 
 `$clanta show token --name="xtoken"`
 

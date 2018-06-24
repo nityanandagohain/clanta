@@ -82,7 +82,9 @@ getDataFromFile = (location) => {
 displayAllData = (data) => {
     let array = data.arr;
     for (let i = 0; i < array.length; i++) {
-        console.log(` ${array[i][0].padEnd(15)} : ${array[i][1]}`);
+        if(array[i][0]!=undefined){
+            console.log(` ${array[i][0].padEnd(15)} : ${array[i][1]}`);
+        }
     }
 }
 
