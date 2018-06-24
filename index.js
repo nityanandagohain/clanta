@@ -13,8 +13,8 @@ module.exports = () => {
         require('./src/help/help')(args);
     } else if (command == 'save') {
         require('./src/save/save')(args);
-    } else if (command == 'get') {
-        require('./src/get/get')(args);
+    } else if (command == 'show') {
+        require('./src/show/show')(args);
     } else if (command == 'remove') {
         require('./src/remove/remove')(args);
     } else {

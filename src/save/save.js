@@ -1,9 +1,8 @@
-const fs = require('fs');
 const mkdirp = require('mkdirp');
 const jsonfile = require('jsonfile');
 
 module.exports = (args) => {
-    if (!args.name && !args.value) {
+    if (!args.name || !args.value) {
         console.log("Please enter proper name and value");
         process.exit();
     }
@@ -18,7 +17,7 @@ module.exports = (args) => {
             saveNote(args);
             break;
         default:
-            console.log("Enter correct command:\n\t token, paseord or note\n\n");
+            console.log("Enter correct command:\n\t token, password or note\n\n");
     }
 }
 
@@ -30,7 +29,7 @@ saveToken = (args) => {
 }
 
 savePassword = (args) => {
-    let passwordFileLocation = '~/.config/clanta/password.json';
+    let passwordFileLocation = '~/.config/clanta/passwords.json';
     let password = [args.name, args.value];
     writeToFile(passwordFileLocation, password);
     console.log("Password Saved")

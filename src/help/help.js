@@ -5,7 +5,7 @@ module.exports = (args) => {
 
         save      ............... save a new note
         get       ............... Get a saved note  
-        remove    ............... show help menu for a command`,
+        remove    ............... delete a note`,
             
         save:`
         token   :
@@ -16,15 +16,15 @@ module.exports = (args) => {
                 $clanta save note --name="my_note" --value="Hi I am good"`,
         get : `
         token   :
-                $clanta get token --name="xtoken"
+                $clanta show token --name="xtoken"
         password:
-                $clanta get password --name="xpassword"
+                $clanta show password --name="xpassword"
         note    :
-                $clanta get note --name="my_note"
+                $clanta show note --name="my_note"
     
-        To get all tokens , passwords or notes:
+        To show all tokens , passwords or notes:
     
-                $clanta get  tokens
+                $clanta show  tokens
     
         or replce tokens , with passwords or notes.`,
         remove : `

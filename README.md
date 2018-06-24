@@ -8,7 +8,7 @@
 
 `$clanta --help` or `$clanta -h`
 
-`$clanta --help=save` or replace save with get,remove.
+`$clanta --help=save` or replace save with show,remove.
 
 #### Save :
 
@@ -20,15 +20,15 @@
 
 #### Get/Retrive :
 
-`$clanta get token --name="xtoken"`
+`$clanta show token --name="xtoken"`
 
-`$clanta get password --name="xpassword"`
+`$clanta show password --name="xpassword"`
 
-`$clanta get note --name="my_note"`
+`$clanta show note --name="my_note"`
 
-* To get all tokens , passwords or notes
+* To show all tokens , passwords or notes
 
-`$clanta get  tokens`
+`$clanta show  tokens`
 
 or replce tokens , with passwords or notes.
 
