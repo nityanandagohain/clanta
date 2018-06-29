@@ -1,4 +1,5 @@
 const jsonfile = require('jsonfile');
+const homeDir = require('os').homedir();
 
 module.exports = (args) => {
     let displayAll = false;
@@ -22,7 +23,7 @@ module.exports = (args) => {
 }
 
 showToken = (args, dispAll) => {
-    let location = `~/.config/clanta/tokens.json`;
+    let location = homeDir + `/.config/clanta/tokens.json`;
     let data = getDataFromFile(location);
     if (dispAll) {
         console.log("Tokens/keys:")
@@ -38,7 +39,7 @@ showToken = (args, dispAll) => {
 }
 
 showPassword = (args, dispAll) => {
-    let location = `~/.config/clanta/passwords.json`;
+    let location = homeDir + `/.config/clanta/passwords.json`;
     let data = getDataFromFile(location);
     if (dispAll) {
         console.log(`Passwords:`);
@@ -54,7 +55,7 @@ showPassword = (args, dispAll) => {
 }
 
 shownNote = (args, dispAll) => {
-    let location = `~/.config/clanta/notes.json`;
+    let location = homeDir + `/.config/clanta/notes.json`;
     let data = getDataFromFile(location);
     if (dispAll) {
         console.log("Notes:");

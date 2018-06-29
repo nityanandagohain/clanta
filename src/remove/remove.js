@@ -1,4 +1,5 @@
 const jsonfile = require('jsonfile');
+const homeDir = require('os').homedir();
 
 module.exports = (args) => {
     if (!args.name) {
@@ -21,21 +22,21 @@ module.exports = (args) => {
 }
 
 removeToken = (args) => {
-    let location = `~/.config/clanta/tokens.json`
+    let location = homeDir + `/.config/clanta/tokens.json`
     let data = getDataFromFile(location);
     data = searchDataByNameAndDelete(args.name, data);
     writeToFile(location, data);
 }
 
 removePassword = (args) => {
-    let location = `~/.config/clanta/passwords.json`
+    let location = homeDir + `/.config/clanta/passwords.json`
     let data = getDataFromFile(location);
     data = searchDataByNameAndDelete(args.name, data);
     writeToFile(location, data);
 }
 
 removeNote = (args) => {
-    let location = `~/.config/clanta/passwords.json`
+    let location = homeDir + `/.config/clanta/passwords.json`
     let data = getDataFromFile(location);
     data = searchDataByNameAndDelete(args.name, data);
     writeToFile(location, data);

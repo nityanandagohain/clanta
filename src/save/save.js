@@ -1,5 +1,6 @@
 const mkdirp = require('mkdirp');
 const jsonfile = require('jsonfile');
+const homeDir = require('os').homedir();
 
 module.exports = (args) => {
     if (!args.name || !args.value) {
@@ -22,21 +23,21 @@ module.exports = (args) => {
 }
 
 saveToken = (args) => {
-    let tokenFileLocation = '~/.config/clanta/tokens.json';
+    let tokenFileLocation = homeDir + '/.config/clanta/tokens.json';
     let token = [args.name, args.value];
     writeToFile(tokenFileLocation, token);
     console.log("Token Saved");
 }
 
 savePassword = (args) => {
-    let passwordFileLocation = '~/.config/clanta/passwords.json';
+    let passwordFileLocation = homeDir + '/.config/clanta/passwords.json';
     let password = [args.name, args.value];
     writeToFile(passwordFileLocation, password);
     console.log("Password Saved")
 }
 
 saveNote = (args) => {
-    let notesFileLocation = '~/.config/clanta/notes.json';
+    let notesFileLocation = homeDir + '/.config/clanta/notes.json';
     let note = [args.name, args.value];
     writeToFile(notesFileLocation, note);
     console.log("Note Saved");
@@ -48,7 +49,7 @@ writeToFile = (location, value) => {
             data.arr.push(value);
         } else {
             data = { arr: [value] };
-            mkdirp.sync('~/.config/clanta/');
+            mkdirp.sync(homeDir + '/.config/clanta/');
         }
         jsonfile.writeFile(location, data, (err) => {
             if (err) {

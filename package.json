@@ -1,6 +1,6 @@
 {
   "name": "clanta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Command Line Note taking app for storing tokens, passwords and other small notes.",
   "main": "index.js",
   "homepage": "https://github.com/nityanandagohain/clanta#readme",
